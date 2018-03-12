@@ -1,6 +1,6 @@
 # Algos 101 crash course approach.
 
-!!!!!! Wheneven possible user Collections.* or Arrays.* util classes.
+!!!!!! Whenever possible user Collections.* or Arrays.* util classes.
 
 1. Implement Bubble sort for both arrays and collections( 2 approaches). Performance ?.. Can you improve it ?
 
