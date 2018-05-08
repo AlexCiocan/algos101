@@ -41,8 +41,11 @@ public class Queue {
 		
 		queue.print();
 		
-		System.out.println(queue.first());
-		System.out.println(queue.last());
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		//System.out.println(queue.first());
+		//System.out.println(queue.last());
 
 	}
 	//points to the first element into the Q
@@ -91,6 +94,7 @@ public class Queue {
 		}
 		rear = temp;
 		length++;
+		System.out.println(data+ " added to the queue");
 	}
 	//print the elements of the Q
 	public void print()
@@ -119,6 +123,7 @@ public class Queue {
 			rear = null;
 		}
 		length--;
+		System.out.println(result+ " removed from the queue");
 		return result;
 	}
 	public int first()
