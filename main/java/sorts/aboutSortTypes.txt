@@ -1,0 +1,22 @@
+Merge sort:
+	1. we split the list into two part
+	2. we repeat the 1. step until the subset has only one element (one element is always sorted in the list)
+	3. we merge these subsets into each other. (no breaking the sortedness)
+	4. done
+	
+	complexity: n * log(n) => splitting the list in two log(n) + comparison at each stage n
+	
+Insertion sort:
+	1. we assume that the first is sorted
+	2. starting from the second element we are searching for their position in the sorted subset
+	
+	complexity: log(n^2) because we are comparing every element with each other
+	
+Selection sort:
+	1. we are searching in each stage the minimum or maximum element from the unordered subset
+	
+	complexity: log(n^2) because we are comparing every element with each other (always searching for min or max)
+	
+BST:
+	1. BST is an ordered binary tree. Therefore to search an element in the tree is very cheap. The complexity to finding an element is log(n).
+	2. if we print out the tree elements in in-order we will see the elements sorted.
