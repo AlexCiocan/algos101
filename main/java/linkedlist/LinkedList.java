@@ -29,7 +29,11 @@ public class LinkedList<T> {
 		}
 		return t;
 	}
-
+	
+	public Node<T> getHead() {
+		return head;
+	}
+	
 	public int getNodePosition(Node<T> node) {
 		int j = 0;
 		Node<T> t = head;
@@ -59,5 +63,21 @@ public class LinkedList<T> {
 
 	public int getSize() {
 		return size;
+	}
+	
+	public LinkedList<Integer> testList() {					// for test
+		Node<Integer> tmp1 = new Node<>(1);
+		Node<Integer> tmp2 = new Node<>(2);
+		Node<Integer> tmp3 = new Node<>(3);
+		Node<Integer> tmp4 = new Node<>(4);
+		
+		LinkedList<Integer> list = new LinkedList<>();
+		list.head = tmp1;
+		list.head.next = tmp2;
+		tmp2.next = tmp3;
+		tmp3.next = tmp4;
+		tmp4.next = tmp1;
+		
+		return list;
 	}
 }

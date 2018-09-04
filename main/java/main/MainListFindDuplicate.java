@@ -7,19 +7,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fileHandler.FileHandler;
-import list.ListFindOptimized;
-import list.ListFindStandard;
+import list.ListFindDuplicateOptimized;
+import list.ListFindDuplicateStandard;
 
-public class MainListFunctions {
+public class MainListFindDuplicate {
 
 	private static int[] array;
 	private static String FILE_NAME = "values.txt";
 	private static ArrayList<Integer> list;
-	private static Logger logger = LoggerFactory.getLogger(MainListFunctions.class);
+	private static Logger logger = LoggerFactory.getLogger(MainListFindDuplicate.class);
 
 	public static void main(String[] args) {
-		ListFindStandard listFindStandard = new ListFindStandard();
-		ListFindOptimized listFindOptimized = new ListFindOptimized();
+		ListFindDuplicateStandard listFindStandard = new ListFindDuplicateStandard();
+		ListFindDuplicateOptimized listFindOptimized = new ListFindDuplicateOptimized();
 		
 		initArrayAndCollection(readFromFile(FILE_NAME));
 		printArray(array);

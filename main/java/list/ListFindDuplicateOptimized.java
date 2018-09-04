@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ListFindOptimized implements Searchable {								// complexity: O(n)
+public class ListFindDuplicateOptimized implements Searchable {								// complexity: O(n)
 
 	@Override
 	public Set<Integer> findDuplicatesInArray(int[] list) {
