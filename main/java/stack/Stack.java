@@ -50,5 +50,9 @@ public class Stack<T> {								// L(ast)I(n)F(irst)O(ut)
 		return null;							// throw custom exception
 	}
 	
+	public int getMaxDepth() {
+		return maxDepth;
+	}
+	
 	
 }

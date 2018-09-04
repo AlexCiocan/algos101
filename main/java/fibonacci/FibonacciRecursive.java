@@ -15,15 +15,16 @@ public class FibonacciRecursive {
 	}
 
 	public ArrayList<Long> generateFibonacciSeq(int n) {
-		fillMapWithValues(n - 1);																	// because of the 0 stored in the map
+		if (n > 0)
+			fillMapWithValues(n - 1);																// because of the 0 stored in the map
 																									// we need to subtract 1 to get n elements
-		for (Map.Entry<Integer, Long> entry : fibMap.entrySet()) {								// create a list with our elements
+		for (Map.Entry<Integer, Long> entry : fibMap.entrySet()) {									// create a list with our elements
 	        seq.add(entry.getValue());
 	    }
 		return seq;
 	}
 
-	public long fillMapWithValues(int number) {														// generates the n-th element storing the other values too
+	private long fillMapWithValues(int number) {													// generates the n-th element storing the other values too
 		if (number == 0) {
 			fibMap.put(number, new Long(0));
 			return number;
