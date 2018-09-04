@@ -1,4 +1,4 @@
-package list;
+package linkedlist;
 
 public class Node<T> {
 	public Node<T> next;
