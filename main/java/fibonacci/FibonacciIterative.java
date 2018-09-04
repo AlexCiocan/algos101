@@ -1,5 +1,6 @@
 package fibonacci;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class FibonacciIterative {
@@ -32,5 +33,17 @@ public class FibonacciIterative {
 		}
 
 		return solution;
+	}
+
+	public BigInteger bigFibonacci(int n) {
+		BigInteger a = BigInteger.valueOf(0);
+		BigInteger b = BigInteger.valueOf(1);
+		BigInteger c = BigInteger.valueOf(1);
+		for (int i = 2; i <= n; i++) {
+			c = a.add(b);
+			a = b;
+			b = c;
+		}
+		return a;
 	}
 }

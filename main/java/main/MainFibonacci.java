@@ -24,6 +24,18 @@ public class MainFibonacci {
 	public static void main(String[] args) {
 		task4FibonacciIterative();
 		taks4FibonacciRecursive();
+		task4FibonacciBigNumbers();
+	}
+	
+	private static void task4FibonacciBigNumbers() {
+		int n = readFromFile("fibonacci_limit.txt");
+		n *= 3;
+		FibonacciIterative fibonacciIterative = new FibonacciIterative();
+		
+		logger.info(n + ". fibonacci element:");
+		logger.info("Iterative approach: " + fibonacciIterative.bigFibonacci(n).toString());
+		
+		
 	}
 	
 	private static void taks4FibonacciRecursive() {
