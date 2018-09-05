@@ -30,7 +30,7 @@ public class MainReverseList {
 	}
 	
 	private static void printList() {
-		for (int i = 0; i < list.getSize(); i++) {
+		for (int i = 1; i <= list.getSize(); i++) {
 			logger.info(i + ". th element: " + list.getNode(i).getData());
 		}
 	}

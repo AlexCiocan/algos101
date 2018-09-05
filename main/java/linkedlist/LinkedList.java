@@ -20,14 +20,37 @@ public class LinkedList<T> {
 		size++;
 	}
 
-	public Node<T> getNode(int i) {
-		int j = 0;
+	public void addToIndex(int i, T data) {
+		if (i == 0) {
+			add(data);
+			return;
+		}
+		int j = 1;
 		Node<T> t = head;
 		while (t.next != null && j != i) {
 			t = t.next;
 			j++;
 		}
-		return t;
+		if (j == i) {
+			Node<T> temp = t;
+			t = new Node<T>(data);
+			t.next = temp.next;
+			temp.next = t;
+			size++;
+		}
+	}
+	
+	public Node<T> getNode(int i) {
+		int j = 1;
+		Node<T> t = head;
+		while (t.next != null && j != i) {
+			t = t.next;
+			j++;
+		}
+		if (t != null && i == j) {
+			return t;
+		} 
+		return null;
 	}
 	
 	public Node<T> getHead() {
@@ -35,7 +58,7 @@ public class LinkedList<T> {
 	}
 	
 	public int getNodePosition(Node<T> node) {
-		int j = 0;
+		int j = 1;
 		Node<T> t = head;
 		while (t != node) {
 			if (t.next == null)

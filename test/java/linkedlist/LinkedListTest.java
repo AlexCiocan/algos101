@@ -22,29 +22,38 @@ public class LinkedListTest {
 	}
 	
 	@Test
-	public void addToFullTest() {
-		stack.add(3);
-		stack.add(4);
-		assertEquals(stack.getCurrentDepth(), stack.getMaxDepth());
+	public void getHeadTest() {
+		assertEquals(new Integer(2), linkedList.getHead().getData());
 	}
 	
 	@Test
-	public void topTest() {
-		int n = stack.getCurrentDepth();
-		assertEquals(new Integer(2), stack.top());
-		assertEquals(n, stack.getCurrentDepth());
+	public void getFirstNodeTest() {
+		assertEquals(new Integer(2), linkedList.getNode(1).getData());
 	}
 	
 	@Test
-	public void popTest() {
-		int n = stack.getCurrentDepth();
-		assertEquals(new Integer(2), stack.pop());
-		assertEquals(n - 1, stack.getCurrentDepth());
-		assertEquals(new Integer(1), stack.pop());
-		assertEquals(n - 2, stack.getCurrentDepth());
-		assertEquals(null, stack.pop());
-		assertEquals(0, stack.getCurrentDepth());
+	public void getLastNodeTest() {
+		assertEquals(3, linkedList.getSize());
+		assertEquals(new Integer(3), linkedList.getNode(linkedList.getSize()).getData());
 	}
 	
+	@Test
+	public void getNonExistingNodeTest() {
+		assertEquals(null, linkedList.getNode(linkedList.getSize() + 1));
+	}
+	
+	@Test
+	public void removeTest() {
+		assertEquals(new Integer(2), linkedList.getHead().getData());
+		linkedList.remove();
+		assertEquals(new Integer(1), linkedList.getHead().getData());
+	}
+	
+	@Test
+	public void addToIndexTest() {
+		linkedList.addToIndex(3, 5);
+		assertEquals(new Integer(5), linkedList.getNode(4).getData());
+		linkedList.printList();
+	}
 	
 }
