@@ -12,9 +12,9 @@ public class Globe {
 		countries = new HashSet<>();
 	}
 
-	public void addCountry(String name) {
-		if (!containsCountryName(name))
-			countries.add(new Country(name));
+	public void addCountry(Country country) {
+		if (!containsCountryName(country.getName()))
+			countries.add(country);
 	}
 
 	public void addForecastForCountry(String name, LocalDate date, Double temperature) {
