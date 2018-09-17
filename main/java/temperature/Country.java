@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Country {
 
-	private HashMap<LocalDate, Double> temperatures;
+	private Map<LocalDate, Double> temperatures;
 	private String name;
 
 	public Country(String name) {
@@ -82,7 +82,7 @@ public class Country {
 		return min;
 	}
 	
-	public HashMap<LocalDate, Double> getTemperatures() {
+	public Map<LocalDate, Double> getTemperatures() {
 		return temperatures;
 	}
 }

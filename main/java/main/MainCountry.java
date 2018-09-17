@@ -4,21 +4,21 @@ import java.time.LocalDate;
 import java.util.Map;
 
 import temperature.Country;
-import temperature.CountryParser;
+import temperature.WeatherParser;
 import temperature.Globe;
 
 public class MainCountry {
 
 	public static void main(String[] args) {
-		CountryParser countryParser = new CountryParser();
+		WeatherParser weatherParser = new WeatherParser();
 		
 		Globe globe = new Globe();
 
-		globe.addCountry(countryParser.getForecast("Munich"));
+		globe.addCountry(weatherParser.getForecast("Munich"));
 
-		globe.addCountry(countryParser.getForecast("London"));
+		globe.addCountry(weatherParser.getForecast("London"));
 
-		globe.addCountry(countryParser.getForecast("Amsterdam"));
+		globe.addCountry(weatherParser.getForecast("Amsterdam"));
 
 		for (Country country : globe.getCountryList()) {
 			for (Map.Entry<LocalDate, Double> entry : country.getTemperatures().entrySet()) {
@@ -38,7 +38,7 @@ public class MainCountry {
 		System.out.println("Min temp on the globe: " + globe.getMinTemperature());
 
 		System.out.println();
-		System.out.println("Max temp on 2018-02-10: " + globe.getMaxTemperatureForADay(LocalDate.parse("2018-09-18")));
-		System.out.println("Min temp on 2018-02-10: " + globe.getMinTemperatureForADay(LocalDate.parse("2018-09-18")));
+		System.out.println("Todays max temp (" + LocalDate.now()  + "): " + globe.getMaxTemperatureForADay(LocalDate.now()));
+		System.out.println("Todays min temp (" + LocalDate.now()  + "): " + globe.getMinTemperatureForADay(LocalDate.now()));
 	}
 }
