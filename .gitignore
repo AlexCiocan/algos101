@@ -1,1 +1,6 @@
 /target/
+/bin/
+
+.idea/
+algos101.iml
+.classpath
